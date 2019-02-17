@@ -50,8 +50,7 @@ public class PriceAdjustment {
 					+ (this.productSpec.getTotalQuantity() * this.productSpec.getProductPrice());
 		}
 
-		//  Subtracts product totalprice with the requested price
-		// value.
+		//  Subtracts product totalprice with the requested price value
 		public void subtractPrice() {
 			this.priceAdjusted = this.productSpec.getTotalPrice()
 					- (this.productSpec.getTotalQuantity() * this.productSpec.getProductPrice());

@@ -65,7 +65,6 @@ public class ProductSale {
 	}
 
 	// Set or Append Total product price based on any adjustment if given.
-	// Also appends the log for adjustments made.
 	private void setProductTotalPrice() {
 		double priceAdjusted;
 		double productValue;

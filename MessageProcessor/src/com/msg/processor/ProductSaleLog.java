@@ -13,14 +13,14 @@ import java.util.HashMap;
 public class ProductSaleLog {
 	
 	
-	// lineitems stores product hashmaps with their product object that contains product details
+	// this hashmaps stores  the  product object that contains product details
 		
 		private HashMap<String, ProductSpecification> lineItems = new HashMap();
 
 		// Used to total the sale value of the product. 
 		private double totalSalesValue;
 
-		//  sales messages that are successfully transactioned.
+		//  sales messages that are successfully processed.
 		private ArrayList normalReports;
 
 		//  adjustment reports of the sale transaction.
@@ -79,9 +79,7 @@ public class ProductSaleLog {
 		}
 
 		/*
-		 * Report outputs sales information to system console on every 10th report
-		 * iteration using modulo. Displays in a table formatted structure and stops
-		 * execution of the application after 50th message iteration.
+		 * Log a report to the console after 10th iteration of the message and prints with some standard format
 		 */
 		public void report() {
 
@@ -105,7 +103,7 @@ public class ProductSaleLog {
 				}
 			}
 
-			// Report and stop execution after 50th message
+			// Report and stop execution after 50th message and adjustment report is printed to console
 			if ((normalReports.size() % 50) == 0 && normalReports.size() != 0) {
 				System.out.println(
 						"Application reached 50 messages and cannot process further. The following are the adjustment records made;\n");
