@@ -71,8 +71,9 @@ public class ProductSale {
 
 		if (!productSpecification.getPriceAdjustmentOperator().isEmpty()) {
 			priceAdjusted = priceAdjustment.getPriceAdjusted();
-			productSpecification.setTotalPrice(priceAdjusted);
+			
 			salesLog.setAdjustmentReports(priceAdjustment.adjustmentReport());
+			productSpecification.setTotalPrice(priceAdjusted);
 		} else {
 			productValue = productSpecification.calculatePrice(productSpecification.getProductQuantity(), productSpecification.getProductPrice());
 			productSpecification.appendTotalPrice(productValue);
